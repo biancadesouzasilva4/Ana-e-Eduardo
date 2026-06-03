@@ -8,39 +8,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html, body{width:100%;overflow-x:hidden;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:'Simonetta', serif;
-  color:#15018f;
-  scroll-behavior:smooth;
+  color:#4f4a3f;
+  background:#f8f5ef;
 }
 
 /* CAPA */
 .capa{
   min-height:100vh;
-  background:url('capa-mobile.png') center center no-repeat;
+  background:url('capa-mobile.jpg') center center no-repeat;
   background-size:cover;
 }
-@media (min-width:1024px){
-  .capa{
-    background:url('capa-desktop.jpg') center center no-repeat;
-    background-size:cover;
-  }
-}
 
-/* SEGUNDA IMAGEM */
+/* SEGUNDA PÁGINA */
 .imagem-section{
   min-height:100vh;
   background:url('foto2-mobile.jpg') center center no-repeat;
   background-size:cover;
-}
-@media (min-width:1024px){
-  .imagem-section{
-    background:url('foto2-desktop.jpg') center center no-repeat;
-    background-size:cover;
-  }
 }
 
 /* DATA */
@@ -51,77 +48,53 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:40px;
-}
-@media (min-width:1024px){
-  .data-section{
-    background:url('fundo-data-desktop.jpg') center center no-repeat;
-    background-size:cover;
-    justify-content:flex-end;
-    padding-right:240px;
-  }
+  padding:40px 22px;
+  text-align:center;
 }
 
 .data-content{
-  text-align:center;
-  max-width:800px;
-}
-@media (min-width:1024px){
-  .data-content{ text-align:right; }
+  width:100%;
+  max-width:360px;
 }
 
 .data-titulo{
-  font-size:42px;
-  margin-bottom:20px;
-  white-space:nowrap;
-}
-
-@media (max-width:768px){
-  .data-titulo{
-    font-size:26px;
-    white-space:normal;
-    line-height:1.3;
-  }
+  font-size:28px;
+  line-height:1.35;
+  font-weight:400;
+  margin-bottom:22px;
+  color:#6f765d;
 }
 
 /* COUNTDOWN */
 .countdown{
   display:flex;
-  gap:15px;
+  gap:8px;
   justify-content:center;
-  flex-wrap:nowrap; /* CORRIGIDO */
+  flex-wrap:nowrap;
   margin-top:20px;
-}
-@media (min-width:1024px){
-  .countdown{
-    justify-content:flex-end;
-    margin-right:120px;
-  }
 }
 
 .box{
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.88);
   backdrop-filter:blur(6px);
-  padding:14px 16px;
-  border-radius:18px;
-  min-width:70px;
+  padding:10px 10px;
+  border-radius:16px;
+  min-width:58px;
   text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
 }
-.box span{display:block;font-size:22px;color:#15018f;}
-.box p{font-size:11px;letter-spacing:2px;margin-top:5px;color:#15018f;}
 
-@media (max-width:768px){
-  .countdown{ gap:8px; }
-  .box{
-    padding:10px 12px;
-    min-width:55px;
-  }
-  .box span{ font-size:18px; }
-  .box p{
-    font-size:9px;
-    letter-spacing:1px;
-  }
+.box span{
+  display:block;
+  font-size:19px;
+  color:#6f765d;
+}
+
+.box p{
+  font-size:9px;
+  letter-spacing:1px;
+  margin-top:5px;
+  color:#4f4a3f;
 }
 
 /* LOCAIS */
@@ -130,60 +103,58 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:60px 20px;
-  gap:60px;
-  background:#eef8fa;
+  padding:60px 22px;
+  gap:45px;
+  background:#f8f5ef;
   flex-direction:column;
-}
-@media (min-width:1024px){
-  .locais-section{ flex-direction:row; }
 }
 
 .local-box{
-  flex:1;
-  min-width:300px;
-  max-width:450px;
+  width:100%;
+  max-width:360px;
   text-align:center;
 }
 
 .local-box h2{
-  font-size:36px;
-  margin-bottom:20px;
+  font-size:34px;
+  font-weight:400;
+  margin-bottom:16px;
+  color:#6f765d;
 }
 
 .local-box p{
-  font-size:20px;
+  font-size:19px;
+  line-height:1.35;
   margin-top:10px;
+  color:#4f4a3f;
 }
 
 .local-img{
   width:100%;
-  max-width:320px;
-  border-radius:15px;
+  max-width:310px;
+  border-radius:18px;
   margin:20px auto;
   display:block;
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* RECEPÇÃO EM DOURADO */
-.recepcao h2,
-.recepcao p{
-  color:#C6A85A;
-}
-
-/* BOTÃO */
+/* BOTÕES */
 button{
-  padding:15px 40px;
+  padding:14px 34px;
   border:none;
   border-radius:40px;
-  background:#15018f;
+  background:#9CA98A;
   color:white;
-  font-size:18px;
+  font-size:17px;
   cursor:pointer;
   margin-top:20px;
   transition:0.3s;
   font-family:'Simonetta', serif;
 }
-button:hover{opacity:0.85;}
+
+button:hover{
+  opacity:0.85;
+}
 
 /* CONFIRMAÇÃO */
 .confirmacao-section{
@@ -195,48 +166,54 @@ button:hover{opacity:0.85;}
   justify-content:flex-end;
   align-items:center;
   text-align:center;
-  padding:60px 20px 100px 20px;
+  padding:60px 22px 90px 22px;
   position:relative;
   color:white;
 }
-@media (min-width:1024px){
-  .confirmacao-section{
-    background:url('confirmacao-desktop.jpg') center center no-repeat;
-    background-size:cover;
-  }
-}
+
 .confirmacao-section::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.35);
+  background:rgba(0,0,0,0.32);
 }
-.confirmacao-section > *{position:relative;z-index:1;}
-.confirmacao-section h2{font-size:44px;margin-bottom:30px;}
+
+.confirmacao-section > *{
+  position:relative;
+  z-index:1;
+}
+
+.confirmacao-section h2{
+  font-size:38px;
+  font-weight:400;
+  margin-bottom:28px;
+}
 
 .form-box{
-  background:rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.18);
   backdrop-filter:blur(8px);
-  padding:30px;
-  border-radius:20px;
+  padding:28px;
+  border-radius:22px;
   width:100%;
-  max-width:350px;
+  max-width:340px;
 }
 
 .confirmacao-section input{
-  padding:12px;
+  padding:13px;
   width:100%;
-  border-radius:8px;
+  border-radius:10px;
   border:none;
   margin-bottom:15px;
   font-size:16px;
   font-family:'Simonetta', serif;
+  text-align:center;
 }
 
 #mensagemSucesso{
   display:none;
   margin-top:20px;
   font-size:22px;
+  line-height:1.35;
 }
 </style>
 </head>
@@ -244,19 +221,36 @@ button:hover{opacity:0.85;}
 <body>
 
 <div class="capa"></div>
+
 <div class="imagem-section"></div>
 
 <div class="data-section">
   <div class="data-content">
     <h1 class="data-titulo">
-      14 de Novembro de 2026&nbsp;•&nbsp;17:30
+      14 de Novembro de 2026<br>
+      às 17h30
     </h1>
 
     <div class="countdown">
-      <div class="box"><span id="dias">00</span><p>Dias</p></div>
-      <div class="box"><span id="horas">00</span><p>Horas</p></div>
-      <div class="box"><span id="minutos">00</span><p>Min</p></div>
-      <div class="box"><span id="segundos">00</span><p>Seg</p></div>
+      <div class="box">
+        <span id="dias">00</span>
+        <p>Dias</p>
+      </div>
+
+      <div class="box">
+        <span id="horas">00</span>
+        <p>Horas</p>
+      </div>
+
+      <div class="box">
+        <span id="minutos">00</span>
+        <p>Min</p>
+      </div>
+
+      <div class="box">
+        <span id="segundos">00</span>
+        <p>Seg</p>
+      </div>
     </div>
   </div>
 </div>
@@ -266,23 +260,28 @@ button:hover{opacity:0.85;}
   <div class="local-box">
     <h2>Cerimônia</h2>
     <p>Paróquia Nossa Senhora da Saúde</p>
-    <img src="igreja.png" class="local-img">
+
+    <img src="igreja.png" class="local-img" alt="Local da cerimônia">
+
     <p>Praça Dr. Lund, 160 - Centro, Lagoa Santa</p>
+
     <a href="https://maps.app.goo.gl/Sq4iRHocffzSESVX7" target="_blank">
-<button>Ver no Maps</button>
-</a>
-</div>
+      <button>Ver no Maps</button>
+    </a>
+  </div>
 
-
-  <div class="local-box recepcao">
+  <div class="local-box">
     <h2>Recepção</h2>
     <p>Le Grand Lagoa Santa</p>
-    <img src="recepcao.png" class="local-img">
+
+    <img src="recepcao.png" class="local-img" alt="Local da recepção">
+
     <p>Avenida das Árvores, 274 - Vila Jardim Presidente, Lagoa Santa - MG</p>
-   <a href="https://maps.app.goo.gl/pxvWYRLxYuadmN71A"_blank">
-<button>Ver no Maps</button>
-</a>
-</div>
+
+    <a href="https://maps.app.goo.gl/pxvWYRLxYuadmN71A" target="_blank">
+      <button>Ver no Maps</button>
+    </a>
+  </div>
 
 </div>
 
@@ -309,11 +308,18 @@ var dataCasamento = new Date("2026-11-14T17:30:00-03:00").getTime();
 setInterval(function() {
   var now = new Date().getTime();
   var distance = dataCasamento - now;
-  if (distance < 0) return;
+
+  if (distance < 0) {
+    document.getElementById("dias").innerHTML = "00";
+    document.getElementById("horas").innerHTML = "00";
+    document.getElementById("minutos").innerHTML = "00";
+    document.getElementById("segundos").innerHTML = "00";
+    return;
+  }
 
   var totalSegundos = Math.floor(distance / 1000);
-  var dias = Math.floor(totalSegundos / (3600*24));
-  var horas = Math.floor((totalSegundos % (3600*24)) / 3600);
+  var dias = Math.floor(totalSegundos / (3600 * 24));
+  var horas = Math.floor((totalSegundos % (3600 * 24)) / 3600);
   var minutos = Math.floor((totalSegundos % 3600) / 60);
   var segundos = totalSegundos % 60;
 
@@ -335,6 +341,3 @@ form.addEventListener("submit", function(e){
 
 </body>
 </html>
-
-
-
